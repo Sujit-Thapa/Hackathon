@@ -1,5 +1,5 @@
-'use client'
-import React, { useState } from "react";
+"use client";
+import { useState } from "react";
 
 interface InventoryItem {
   id: number;
@@ -27,7 +27,7 @@ export default function Inventory() {
   };
 
   const removeItem = (id: number) => {
-    setItems(items.filter(item => item.id !== id));
+    setItems(items.filter((item) => item.id !== id));
   };
 
   return (

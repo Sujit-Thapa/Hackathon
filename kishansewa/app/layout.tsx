@@ -1,8 +1,5 @@
 import { FaWarehouse, FaCloudSun, FaBook, FaSeedling } from "react-icons/fa6";
-import './globals.css';
-
-
-
+import "./globals.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

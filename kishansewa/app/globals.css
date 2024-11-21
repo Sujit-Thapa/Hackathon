@@ -28,9 +28,10 @@ nav ul li a {
 }
 
 main {
-  padding: 20px;
+  padding: 5px;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #333;
 }
