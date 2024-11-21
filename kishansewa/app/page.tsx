@@ -1,12 +1,28 @@
-import React from 'react';
-import styles from './page.module.css';
-import { FaWarehouse, FaCloudSun, FaSeedling } from 'react-icons/fa';
+import React from "react";
+import styles from "./page.module.css";
+import { FaWarehouse, FaCloudSun, FaSeedling } from "react-icons/fa";
+import { UserButton } from "@clerk/nextjs";
+import { getAuth } from "@clerk/nextjs/server";
+
+// const { userId } = getAuth(context);
+
+// if (userId) {
+//   // Redirect logged-in users to another page (e.g., dashboard)
+//   return {
+//     redirect: {
+//       destination: "/dashboard",
+//       permanent: false,
+//     },
+//   };
+// }
 
 const Page = () => {
   return (
     <div className={styles.mainContainer}>
       <h1 className={styles.heading}>KishanSewa Dashboard</h1>
-
+      <div className="button">
+        <UserButton />
+      </div>
       <div className={styles.cardContainer}>
         {/* Inventory Card */}
         <div className={styles.card}>
@@ -39,7 +55,9 @@ const Page = () => {
       {/* Weather Section */}
       <div className={styles.weatherSection}>
         <h2 className={styles.weatherTitle}>Weather Updates</h2>
-        <p className={styles.weatherData}>Sunny, 25°C | Wind: 10km/h | Humidity: 60%</p>
+        <p className={styles.weatherData}>
+          Sunny, 25°C | Wind: 10km/h | Humidity: 60%
+        </p>
       </div>
 
       {/* Footer */}
