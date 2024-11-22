@@ -21,7 +21,7 @@ import {
 export const SideNav = () => {
   return (
     <>
-      <div className="flex flex-col w-[30%] gap-5">
+      <div className="flex flex-col w-[15%] gap-5">
         <div className="flex flex-row items items-center p-1 gap-3">
           <LiaCalendarAltSolid size={30} /> <p>Schedule</p>
         </div>

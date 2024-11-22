@@ -7,8 +7,9 @@ const Page = () => {
   return (
     <>
       <div className={styles.mainContainer}>
-        <h1 className={styles.heading}>KishanSewa Dashboard</h1>
         <div className="button"></div>
+        {/* Weather Section */}
+        <Weather />
         <div className={styles.cardContainer}>
           {/* Inventory Card */}
           <div className={styles.card}>
@@ -35,8 +36,6 @@ const Page = () => {
             </p>
           </div>
         </div>
-        {/* Weather Section */}
-        <Weather />
       </div>
     </>
   );
