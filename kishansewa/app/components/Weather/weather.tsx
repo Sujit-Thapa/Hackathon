@@ -146,7 +146,7 @@ const Weather: React.FC = () => {
       )}
       {forecastData && (
         <div>
-          <h2 className="text-xl font-bold">3-Day Weather Forecast</h2>
+          <h2 className="text-xl font-bold mb-2">3-Day Weather Forecast</h2>
           <div className="border border-gray-300 rounded-lg  text-center bg-gray-100">
             <div className="flex flex-wrap justify-center">
               {forecastData.list
@@ -155,7 +155,7 @@ const Weather: React.FC = () => {
                 .map((forecast: any, index: number) => (
                   <div
                     key={index}
-                    className="border border-gray-300 rounded-lg p-5 m-2 w-52 text-center bg-gray-100"
+                    className="border border-gray-300 rounded-lg p-3 m-2 w-52 text-center bg-gray-100"
                   >
                     <img
                       src={getWeatherIcon(forecast.weather[0].main)}
