@@ -1,16 +1,15 @@
-import React from "react";
+import React, { use } from "react";
 import styles from "./page.module.css";
 import { FaWarehouse, FaCloudSun, FaSeedling } from "react-icons/fa";
-import { UserButton } from "@clerk/nextjs";
-import { getAuth } from "@clerk/nextjs/server";
-import { NavBar } from "../components/navbar/navBar";
+import Weather from "../components/Weather/weather";
 
 const Page = () => {
   return (
     <>
       <div className={styles.mainContainer}>
-        <h1 className={styles.heading}>KishanSewa Dashboard</h1>
         <div className="button"></div>
+        {/* Weather Section */}
+        <Weather />
         <div className={styles.cardContainer}>
           {/* Inventory Card */}
           <div className={styles.card}>
@@ -36,13 +35,6 @@ const Page = () => {
               Plan optimal crop rotations for improved soil health and yields.
             </p>
           </div>
-        </div>
-        {/* Weather Section */}
-        <div className={styles.weatherSection}>
-          <h2 className={styles.weatherTitle}>Weather Updates</h2>
-          <p className={styles.weatherData}>
-            Sunny, 25°C | Wind: 10km/h | Humidity: 60%
-          </p>
         </div>
       </div>
     </>
