@@ -7,9 +7,10 @@ const Page = () => {
   return (
     <>
       <div className={styles.mainContainer}>
-        <div className="button"></div>
         {/* Weather Section */}
-        <Weather />
+        <div className="flex w-full">
+          <Weather />
+        </div>
         <div className={styles.cardContainer}>
           {/* Inventory Card */}
           <div className={styles.card}>
