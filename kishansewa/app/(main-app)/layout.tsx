@@ -16,15 +16,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
     <header>
       <NavBar />
     </header>
-    <div className="flex ">
+    <div className="flex gap-0 ">
       <SideNav />
-      <main>{children}</main>
-    </div>
-    {/* Footer */}
-    <div>
-      <footer className={styles.footer}>
-        © 2024 KishanSewa. All rights reserved.
-      </footer>
+      <main className="w-full">{children}</main>
     </div>
   </>
 );
