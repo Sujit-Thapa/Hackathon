@@ -66,7 +66,7 @@ const Weather: React.FC = () => {
   const getWeatherIcon = (weather: string) => {
     switch (weather) {
       case "Clear":
-        return "/icons/wi-sunny.svg";
+        return "/icons/wi-day-sunny.svg";
       case "Clouds":
         return "/icons/wi-cloudy.svg";
       case "Rain":
@@ -88,7 +88,7 @@ const Weather: React.FC = () => {
       case "Tornado":
         return "/icons/wi-fog.svg";
       default:
-        return "/icons/wi-na.svg";
+        return "/icons/wi-day-sunny.svg";
     }
   };
 
@@ -106,7 +106,7 @@ const Weather: React.FC = () => {
     >
       {/* 3-Day Weather Forecast Section */}
       {forecastData && (
-        <div className="border border-gray-300 rounded-lg  text-center bg-white bg-opacity-20 backdrop-blur-md shadow-lg">
+        <div className="border border-gray-300 rounded-lg   bg-white bg-opacity-20 backdrop-blur-md shadow-lg">
           <div>
             <div className="flex flex-wrap gap-3 justify-center">
               {forecastData.list
@@ -146,7 +146,7 @@ const Weather: React.FC = () => {
           </div>
           {/* Current Weather Section */}
           {currentWeather && (
-            <div className=" rounded-lg p-2 flex  gap-5   bg-white bg-opacity-20 backdrop-blur-md shadow-lg">
+            <div className=" rounded-lg p-2 flex bg-white bg-opacity-20 backdrop-blur-md ">
               <div>
                 <h2 className="text-xl font-bold">
                   {" "}
@@ -168,14 +168,14 @@ const Weather: React.FC = () => {
                 />
               </div>
 
-              <p className="my-2 text-5xl flex flex-col items-center justify-center">
+              <div className="my-2 text-5xl flex flex-col items-center justify-center">
                 {currentWeather.main.temp}°C
                 <p className="my-2 text-lg">
                   {" "}
                   {currentWeather.weather[0].description}
                 </p>
-              </p>
-              <div className="flex  flex-col my-5 gap-2 ml-9    text-left ">
+              </div>
+              <div className="flex  flex-col my-5 gap-2 ml-9 text-left ">
                 <p>
                   Feels Like: {currentWeather.main.feels_like}
                   °C
