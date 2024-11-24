@@ -2,14 +2,18 @@ import React, { use } from "react";
 import styles from "./page.module.css";
 import { FaWarehouse, FaCloudSun, FaSeedling } from "react-icons/fa";
 import Weather from "../components/Weather/weather";
+import { TranscationChart } from "../components/trancation-chart/transcationChart";
 
 const Page = () => {
   return (
     <>
       <div className={styles.mainContainer}>
         {/* Weather Section */}
-        <div className="flex w-full">
+        <div className="flex gap-5 w-full">
           <Weather />
+          <div className="border-2 rounded-md bg-opacity-20 backdrop-blur-md shadow-lg">
+            <TranscationChart />
+          </div>
         </div>
         <div className={styles.cardContainer}>
           {/* Inventory Card */}
